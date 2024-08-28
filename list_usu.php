@@ -6,6 +6,10 @@ if (!isset($_SESSION['isLogin']) || $_SESSION['isLogin'] != true) {
 	header('location: login.php');
 	exit;
 }
+if ($_SESSION['info']['NombreRol'] <> "Administrador") {
+  header('location: index.php');
+  exit;
+}
 include("BD/conexion.php");
 ?>
 <!DOCTYPE html>
@@ -16,7 +20,7 @@ include("BD/conexion.php");
     <title>Inicio</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-
+		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 		<?php include('nav.php');?>
@@ -72,18 +76,18 @@ include("BD/conexion.php");
                         <td>'.$row['Direccion'].'</td>
                         <td>'.$row['FechaRegistro'].'</td>
 						<td>
-						<a href="editusu.php?nik='.$row['UsuarioID'].'" title="Editar datos" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit" aria-hidden="true"></a>
-						<a href="list_usu.php?aksi=delete&nik='.$row['UsuarioID'].'" title="Eliminar" onclick="return confirm(\'Esta seguro de borrar los datos '.$row['Nombre'].'?\')" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+						<a href="edit_usu.php?nik='.$row['UsuarioID'].'" title="Editar datos" class="btn btn-primary btn-sm"><i class="bx bx-up-arrow-circle bx-burst-hover" style="color:black"></i></a>
+						<a href="list_usu.php?aksi=delete&nik='.$row['UsuarioID'].'" title="Eliminar" onclick="return confirm(\'Esta seguro de borrar los datos '.$row['Nombre'].'?\')" class="btn btn-danger btn-sm"><i class="bx bxs-trash bx-tada-hover" style="color:black"  ></i></a>
 						</td>
 						';
 					}
 				}
 				?>
 			</table>
+			
 			</div>
 		</div>
 	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

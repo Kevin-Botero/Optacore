@@ -9,7 +9,9 @@
 
             <?php
             if (isset($_SESSION['isLogin']) && $_SESSION['isLogin'] == true) {
-
+                if ($_SESSION['info']['NombreRol'] == "Administrador") {
+                    echo '<li class="nav-item"><a class="nav-link" href="list_usu.php">Administrar Usuarios</a></li>';
+                  }
                 echo '<li class="nav-item"><a class="nav-link" href="cerrar_sesion.php">Cerrar</a></li>';
             } else {
                 echo '<li class="nav-item"><a class="nav-link" href="login.php">Iniciar Sesión</a></li>';
