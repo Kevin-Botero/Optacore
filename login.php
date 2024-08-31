@@ -1,9 +1,5 @@
 <?php
 session_start();
-if (!isset($_SESSION['isLogin']) || $_SESSION['isLogin'] != false) {
-	header('location: index.php');
-	exit;
-}
 include("BD/conexion.php");
 ?>
 <!DOCTYPE html>
