@@ -8,50 +8,124 @@ nav{
     background-color: #dfdfdf;
 }
 nav a:hover{
-  background-color: blue;
+  
   color: antiquewhite;
 }
 
 
 
 body {
-    /* make the body full height*/
     height: 100vh;
-    /* set our custom font */
     font-family: 'Roboto',
     sans-serif;
-    /* create a linear gradient*/
     display:block;
 }
 
-
- .section1 {
-        flex-direction: column;
-        margin-top: 150px;
-        margin-bottom: 60px;
-        background-color: #a5947a;
-        width: 80%;
-        
+h2 {
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 2em;
 }
-      
-    .texto1 h2 {
-        font-size: 25px;
-        text-align: center;
-        padding: 0 50px;
-        background-color: #f1dfc3;
-        width: 90%;
-      }
+
+p, ul {
+  color: #555;
+  line-height: 1.6;
+  margin: 20px;
+  text-align: center;
+}
+
+.contenido-inicio section  {
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 10px 8px 10px rgba(185, 183, 183, 0.884);
+  max-width: 800px;
+  border-radius: 10px;
+}
+.linea-vertical {
+  border: none;
+  border-left: 2px solid rgb(235, 235, 235);
+  height: 100px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 2px 0;
+  padding: 2px;
+  border-radius: 5px;
+  font-size: 0.8em;
+}
+.li_nav {
+    background-color: #e7f5ff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+.valores ul li{
+  box-shadow: 6px 5px 6px rgb(179, 245, 239);
+  
+}
+
+.vision, .mision, .historia, .equipo,.innovacion, .contacto, .acerca {
+  margin-bottom: 40px;
+  
+}
+
+
+.contacto p {
+  font-size: 1.2em;
+  background-color: #cadbf5;
+  padding: 15px;
+  border-radius: 5px;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.d-item{
+  height: 400px;
+  
+}
+.d-img{
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+
+
+@media screen and (max-width: 768px) {
+  section {
+      margin: 10px;
+      padding: 15px;
+  }
+
+  h2 {
+      font-size: 1.5em;
+  }
+
+  p, ul li {
+      font-size: 1em;
+  }
+}   
     
-      .texto1 p {
-        text-align: center;
-        font-size: 18px;
-        width: 300px;
-      }
 
     .container-imagen{
       display: block;
-      grid-template-columns: repeat(2fr 2fr);
+      
       margin:5px;
+      text-align: center;
+    }
+
+    .container-1{
+      grid-template-columns: repeat(4fr);
       text-align: center;
     }
     .container-footer{
@@ -60,11 +134,11 @@ body {
       text-align: center;
     }
     footer {
-        margin-top: 200px;
+        margin-top: 20px;
         padding: 50px ;
         display: block;
         gap: 5rem;
-        background-color:  #a5947a;
+        background-color:  #f6f7f7e1;
         color:black;
        width: 100%;
        grid-template-columns: repeat(2fr 1fr);
@@ -99,21 +173,17 @@ body {
         
       }
       
-    
-   
-    
-    
         @media screen and (max-width:768px) {
     
-            /* make the layout  a single column and add some margin to the wrapper */
             #form_wrapper {
                 grid-template-columns: 1fr;
                 margin-left: 10px;
                 margin-right: 10px;
             }
-            /* on small screen we don't display the image */
+            
             #form_left {
                 display: none;
             }
         }
+        
         

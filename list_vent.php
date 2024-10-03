@@ -11,11 +11,7 @@ if ($_SESSION['info']['RolID'] <> "1") {
   exit;
 }
 include("BD/conexion.php");
-$consulta = mysqli_query($con, "SELECT * FROM roles");
-$roles = [];
-while ($rol = mysqli_fetch_assoc($consulta)) {
-	$roles[$rol['RolID']] = $rol['NombreRol']; // Guardar los roles en un array asociativo con RolID como clave
-}
+$cons_vent = mysqli_query($con, "SELECT * FROM tbventas");
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -30,27 +26,10 @@ while ($rol = mysqli_fetch_assoc($consulta)) {
 </head>
 <body>
 <?php include('nav.php');?>
-	<div class="container">
-	<hr/>
-	<h2>Lista de Usuarios</h2>
-	<hr/>
-<?php
-if(isset($_GET['aksi']) == 'delete'){
-	// escaping, additionally removing everything that could be (html/javascript-) code
-	$nik = mysqli_real_escape_string($con,(strip_tags($_GET["nik"],ENT_QUOTES)));
-	$cek = mysqli_query($con, "SELECT * FROM usuarios WHERE UsuarioID ='$nik'");
-	if(mysqli_num_rows($cek) == 0){
-		echo '<div class="alert alert-info alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> No se encontraron datos.</div>';
-	}else{
-		$delete = mysqli_query($con, "DELETE FROM usuarios WHERE UsuarioID='$nik'");
-		if($delete){
-			echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> Datos eliminado correctamente.</div>';
-		}else{
-			echo '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> Error, no se pudo eliminar los datos.</div>';
-		}
-	}
-}
-?>
+<div class="container">
+<hr/>
+<h2>Lista de ventas</h2>
+<hr/>
 <form class="form-inline" method="get">
 </form>
 <div class="table-responsive">

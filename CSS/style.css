@@ -1,9 +1,10 @@
 nav{
     background-color: #dfdfdf;
+    text-align: center;
 }
 :root {
-    --body_gradient_left:#7200D0;
-    --body_gradient_right: #C800C1;
+    --body_gradient_left:#fffde7
+    --body_gradient_right: #fffde7;
     --form_bg: #ffffff;
     --input_bg: #E5E5E5;
     --input_hover:#eaeaea;
@@ -26,10 +27,12 @@ body {
     background-image: linear-gradient(to right, var(--body_gradient_left), var(--body_gradient_right));
     display:block;
 }
-
+form{
+    margin-top: 5%;
+}
 #form_wrapper {
     width: 1000px;
-    height: 700px;
+    height: 750px;
     /* this will help us center it*/
     margin:auto;
     background-color: var(--form_bg);
@@ -41,7 +44,9 @@ body {
     /* with a small gap in between them*/
     grid-gap: 5vw;
     /* add some padding around */
-    padding: 5vh 15px;
+    padding: 4vh 15px;
+    margin-top: 5%;
+   
 }
 #form_left {
     /* center the image */
@@ -67,7 +72,7 @@ body {
     /* vertically align icon and text inside the div*/
     display: flex;
     align-items: center;
-    padding-left: 20px;
+    
 }
 
 .input_container:hover {
@@ -76,11 +81,12 @@ body {
 
 .input_container,
 #input_submit {
-    height: 60px;
+    height: 50px;
     /* make the borders more round */
     border-radius: 30px;
-    width: 100%;
+    width: 100%
 }
+
 
 .input_field {
     /* customize the input tag with lighter font and some padding*/

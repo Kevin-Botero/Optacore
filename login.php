@@ -8,16 +8,18 @@ include("BD/conexion.php");
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Inicio Sesión</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
     crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
   <link rel="stylesheet" href="CSS/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <?php include("nav.php"); ?>
 
 <body>
+  <br>
   <form action="LOGIN/verif_usu.php" method="post">
     <div id="form_wrapper">
       <div id="form_left">
@@ -31,18 +33,18 @@ include("BD/conexion.php");
           unset($_SESSION['error_msg']);
         }
         ?>
-        <div class="input_container">
+        <div class="input_container" style="padding: 15px;">
           <i class="fas fa-envelope"></i>
           <input placeholder="Email" type="email" name="Email" id="field_email" class='input_field'>
         </div>
-        <div class="input_container">
+        <div class="input_container" style="padding: 15px;">
           <i class="fas fa-lock"></i>
           <input placeholder="Password" type="password" name="Password" id="field_password" class='input_field'>
         </div>
         <input type="submit" value="Login" name="Login" id='input_submit' class='input_field'>
 
         <span id='create_account'>
-          <a href="registrar_usuario.php">Create your account ➡ </a>
+          <a href="registrar_usuario.php">Registrate ➡ </a>
         </span>
       </div>
     </div>

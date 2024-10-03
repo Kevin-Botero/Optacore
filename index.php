@@ -11,125 +11,117 @@ include("BD/conexion.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
+    <link rel="stylesheet" href="CSS/style.css">
+		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="CSS/index_style.css">
 </head>
 <body>
     <?php include("nav.php");?>
-    <section>
-        <center>
-            <marquee behavior="" direction="left" scrollamount="14">
-                <p class="ve">
-                    CALIDAD Y EXCLUSIVIDAD A UN CLICK 
-                </p>
-            </marquee>
-    </section>
-    <div class="container">
-        <h1 class="text-center my-4">Bienvenido a Optacore</h1>
-        <!-- Contenido de la página principal -->
-    </div>
+<ul class="nav justify-content-center">
+    <!---<li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Gafas de Sol</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Gafas Oftàlmicas</a>
+    </li> --->
+<li class="nav-item">
+  <a class="nav-link li_nav" href="#">Pide tu Cita</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link li_nav" href="conocenos.php">Conócenos</a>
+</li>
+</ul>
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="true">
+<div class="carousel-indicators">
+  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+</div>
+<div class="carousel-inner ">
+<div class="carousel-item active d-item">
+<img src="IMAGENES/fondo5.jpg" class="d-block w-100 d-img" alt="slider 1">
+<div class="carousel-caption d-none d-md-block">
+<h5>AGENDA TU REVISION ANUAL Y CUIDA TU VISION CN NOSOTROS </h5><br>
+<h5>Somos lideres en la salud visual, siempre estamos pensando en tu bienestar.</h5>
+<button class="btn btn-primary px-4 py-2 fs-5 mt-5">Agenda aqui</button>
+</div>
+</div>
+<div class="carousel-item d-item">
+<img src="IMAGENES/fondo2.webp" class="d-block w-100 d-img" alt="slider 1">
+<div class="carousel-caption d-none d-md-block">
+<h5>Aprovecha esta oportunidad</h5><br>
+<h5>Por la compra de montura + lente, obten </h5><br>
+<h3>30% DE DCTO.</h3>
+<h3>En productos selecionados.</h3>
+<button class="btn btn-primary px-4 py-2 fs-5 mt-5">compra aqui</button>
+</div>
+</div>
+<div class="carousel-item d-item">
+<img src="IMAGENES/transitions_1.jpg" class="d-block w-100 d-img" alt="slider 1">
+<div class="carousel-caption d-none d-md-block">
+<h3>Estrena look bajo el sol</h3><br>
+<h3>30% DCTO EN GAFAS DE SOL.</h3><br>
+<h3>En productos selecionados.</h3>
+<button class="btn btn-primary px-4 py-2 fs-5 mt-5">compra aqui</button>
+</div>
+</div>
+</div>
+</div>
 
+<section>
+<center>
+<marquee behavior="" direction="left" scrollamount="14">
+  <p class="ve">CALIDAD Y EXCLUSIVIDAD A UN CLICK </p>
+</marquee>
+</section>
 
-    <center>
-
-        <div class="container">
-        
-            <img src="imagenes/logopta.png" alt="raptor_arriba" width="20%" height="10%">
-            <div class="cotiza">
-                <h1>Elije tus gafas</h1>
-                <p>Consigue los mejore estilos</p>
-                <p>Mira al mundo de otra manera</p>
-            </div>
-       
-    
-        <section class="section1">
-       <div class="texto1">
-        <h2>Acerca de Nosotros</h2>
-        <p>Somos una entidad online la cual se dedica ala venta de lentes de todo tipo ya sea solar, medico, de paseo, deporte u otro fin.</p>
-        <p>Nos distinguimos por el cumplimiento a la hora de la compra y ante todo la legalidad, confianza la cual nos destaca a diferencia de los demas.</p>
-       </div></section>
-       </div>
-    </center>
-    
-   
-        <div class="container-imagen">
-           <center> <b><h1>Lentes Destacados</h1></b>
-    <img src="IMAGENES/gafa6.jpg" alt="" height="130px" >
-    <img src="IMAGENES/gafa0.jfif" alt="" height="130px" >
-    <img src="IMAGENES/gafa1.webp" alt="" height="180px" >
-    <img src="IMAGENES/gafa3.webp" alt="" height="130px"><br>
-    <img src="IMAGENES/gafa4.jpg" alt="" height="130px" >
-    <img src="IMAGENES/gafa9.jfif" alt="" height="130px" >
-    <img src="IMAGENES/gafa5.jpg" alt="" height="130px" >
-    <img src="IMAGENES/gafa8.webp" alt="" height="180px" >
-       </div></center>
-
-    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/ZcrgtR3P91Q?si=GHK4BzXQoa6Dm6yH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>
-        <center>
-        <img src="IMAGENES/OAKLEY.jpg" alt="" height="90px" width="110px">
-        <img src="IMAGENES/persol.jpg" alt="" height="90px" width="110px">
-        <img src="IMAGENES/platini_1.jpg" alt="" height="90px" width="110px">
-        <img src="IMAGENES/polo.jpg" alt="" height="90px" width="110px">
-        <img src="IMAGENES/giorgio.jpg" alt="" height="90px" width="110px">
-        <img src="IMAGENES/dolce_1.jpg" alt="" height="90px" width="110px">
-        <img src="IMAGENES/coach.jpg" alt="" height="90px" width="110px">
-        <img src="IMAGENES/bvlgari_1.jpg" alt="" height="90px" width="110px">
-        <img src="IMAGENES/armani.jpg" alt="" height="90px" width="110px">
-        <img src="IMAGENES/jean-monnier.jpg" alt="" height="90px" width="110px"></center>
-        
-        <footer>
-          
-          <div class="container-footer">
-        <section class="footer-section2">
-      <div>
-        <h1><span>Nuestros Servicios</span></h1>
-      </div>
-      <div>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="index.html">Citas Medicas</a></li>
-          <li><a href="index.html">Trabaja con nosotros</a></li>
-          <li><a href="#ubicacion">Monturas</a></li>
-         
-        </ul>
-      </div>
-     
-    </section>
-    <section class="footer-section2">
-      <div>
-        <h1><span>Productos</span></h1>
-        <div>
-          <ul>
-            <li><a href="#">Oakley</a></li>
-            <li><a href="#">Persol</a></li>
-            <li><a href="#">Platini</a></li>
-            <li><a href="#">Polo Ralph Lauren</a></li>
-            <li><a href="#">Giorgio Armani</a></li>
-            <li><a href="#">Dolce & Gabbana</a></li>
-            <li><a href="#">Coach</a></li>
-            <li><a href="#">Bvlgari</a></li>
-            <li><a href="#">A|X Armani Exchange</a></li>
-            <li><a href="#">Jean Monnier</a></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-   
-    <section class="footer-section3">
-      <div>
-        <h1><span>Siguenos</span></h1>
-      </div>
-      <div>
-        <ul>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">GitHub</a></li>
-          <li><a href="#">Facebook</a></li>
-        </ul>
-      </div>
-    </section>
-      </div>
-  </footer>
-
-    
+            
+<b><h1>Lentes Destacados</h1></b> 
+<div class="container text-center"> 
+  <div class="d-flex flex-row">
+<?php
+$sql = mysqli_query($con, "SELECT * FROM productos ORDER BY ProductoID ASC");
+if(mysqli_num_rows($sql) == 0){
+    echo '<tr><td colspan="8">No hay datos.</td></tr>';
+}else{
+while($row = mysqli_fetch_assoc($sql) ){ 
+if ($row['ProductoID'] <= 4 ){ ?>
+<div class="p-2 flex-fill card" style="width: 18rem; margin:10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); ">
+  <?php echo '<img src="data:' .  ';base64,' . base64_encode($row['Imagen']) . '" class="card-img-top" alt="Imagen">';?>
+  <div class="card-body">
+  <h6 class="card-title"><?php echo $row['NombreProducto']; ?></h6>
+  <h6 class="card-title">$ <?php echo number_format($row['Precio'],2,",",".");?></h6>
+  <?php 
+  echo '<a href="agregar.php?id='. $row ['ProductoID'].'" class="btn btn-outline-secondary"><img src="IMAGENES/carrito.png" style="height: 25px;" alt=""></a>'; 
+  echo '<a href="detalle_product.php?id='. $row ['ProductoID'].'" class="btn btn-outline-primary">Detalles</a>';
+  ?>
+  </div>
+</div>
+<?php
+}
+}
+}?>
+<!--<img src="IMAGENES/gafa6.jpg" alt="" height="80em" >
+<img src="IMAGENES/gafa0.jfif" alt="" height="80em" >
+<img src="IMAGENES/gafa1.webp" alt="" height="180px" >
+<img src="IMAGENES/gafa3.webp" alt="" height="80em">
+<img src="IMAGENES/gafa4.jpg" alt="" height="80em" >
+<img src="IMAGENES/gafa9.jfif" alt="" height="80em" >
+<img src="IMAGENES/gafa5.jpg" alt="" height="80em" >-->
+</div>
+</div>
+<div style="text-align: center;">
+<a href="gallery_product.php" class="btn btn-outline-primary" style="width: 68.7%;">Más Resultados</a>
+</div>
+<hr>
+<div class="container-1">
+<img src="IMAGENES/michael.jpg" alt=""width="20%" height="20%">
+<img src="IMAGENES/ray.jpg" alt=""width="20%" height="20%">
+<img src="IMAGENES/emporio.jpg" alt="" width="20%" height="20%">
+<img src="IMAGENES/kilyan.jpg" alt=""width="20%" height="20%">
+</div>
+<?php include('footer.php'); ?>
 </body>
 </html>

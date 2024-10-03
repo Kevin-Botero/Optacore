@@ -28,7 +28,7 @@ if (strlen($pwd_form) == 0) {
          /* echo $email . '<br>';
             echo $pwd_form;  */
 
-$consultaIniciarSesion = mysqli_query($con, "SELECT u.UsuarioID, u.Nombre, u.Email, r.NombreRol, u.RolID, u.Contrasena FROM usuarios u INNER JOIN roles r ON u.RolID = r.RolID WHERE u.Email = '$email'");
+$consultaIniciarSesion = mysqli_query($con, "SELECT u.UsuarioID, u.Nombre, u.Apellido, u.Email, u.Telefono, u.Direccion, r.NombreRol, u.RolID, u.Contrasena FROM usuarios u INNER JOIN roles r ON u.RolID = r.RolID WHERE u.Email = '$email'");
     //Verificamos la cantidad de registros
 if (mysqli_num_rows($consultaIniciarSesion) == 1) {
     // Email si existe
