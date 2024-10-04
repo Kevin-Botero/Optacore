@@ -25,6 +25,7 @@ echo '
     <li><a class="dropdown-item" href="list_usu.php">Usuarios</a></li>
     <li><a class="dropdown-item" href="form_producto.php">Agregar Productos</a></li>
     <li><a class="dropdown-item" href="list_productos.php">Lista de Productos</a></li>
+    <li><a class="dropdown-item" href="list_vent.php">Ventas</a></li>
   </ul>
 </div>';
 //echo '<li class="nav-item"><a class="nav-link" href="list_usu.php"><img src="IMAGENES/editar.png" alt="" height="40px" width="40px"></a></li>';

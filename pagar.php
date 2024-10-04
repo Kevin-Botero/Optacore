@@ -9,6 +9,7 @@ if (!isset($_SESSION['carrito'])){
   header('location: index.php');
 	exit;
 }
+$stock = 0;
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -63,6 +64,15 @@ if (isset($_GET['id']) == 'pagar') {
 </div>
 </div>
 <?php
+foreach($datos_cart as $key => $row ){
+  $id = $row['ProductoID'];
+  $sql = mysqli_query($con, "SELECT * FROM productos WHERE ProductoID='$id'");
+  $key = mysqli_fetch_assoc($sql);
+  $stock = $key['Stock'] - $row['Cantidad'];
+  $update = $con->prepare ("UPDATE productos SET Stock = ? WHERE ProductoID = ?");
+  $update ->bind_param("ii", $stock,$row['ProductoID']);
+  $update->execute();
+}
 }else{
   header('location: carrito.php');
 }

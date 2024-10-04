@@ -49,7 +49,7 @@ $insert = $con->prepare("INSERT INTO productos(NombreProducto,Descripcion,Precio
 if ($insert) {
     $insert->bind_param("sssssssss", $nombre,$descripcion,$precio, $stock, $imagen, $categoria, $marca, $fecha, $descuento);
     if ($insert->execute()) {
-        echo 'El producto a sido guerdado con Exito';
+        echo 'El producto a sido guardado con Exito';
     }else{
         echo 'Error al guardar el producto'; 
     }

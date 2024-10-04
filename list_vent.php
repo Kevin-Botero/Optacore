@@ -11,7 +11,6 @@ if ($_SESSION['info']['RolID'] <> "1") {
   exit;
 }
 include("BD/conexion.php");
-$cons_vent = mysqli_query($con, "SELECT * FROM tbventas");
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -35,38 +34,22 @@ $cons_vent = mysqli_query($con, "SELECT * FROM tbventas");
 <div class="table-responsive">
 <table class="table table-striped table-hover">
 <tr>
-	<th>UsuarioID</th>
-	<th>Nombre</th>
-	<th>Apellido</th>
-	<th>Email</th>
-	<th>Telefono</th>
-	<th>Dirección</th>
-	<th>Fecha de Registro</th>
-	<th>Rol</th>
-	<th>Acciones</th>
+	<th>IDVenta</th>
+	<th>Clave de Transaccion</th>
+	<th>Total</th>
 </tr>
 	<?php
-	$sql = mysqli_query($con, "SELECT * FROM usuarios ORDER BY UsuarioID ASC");
+	$cons_vent = mysqli_query($con, "SELECT * FROM tbventas ORDER BY id ASC");
 
-	if(mysqli_num_rows($sql) == 0){
+	if(mysqli_num_rows($cons_vent) == 0){
 		echo '<tr><td colspan="8">No hay datos.</td></tr>';
 	}else{
-			while($row = mysqli_fetch_assoc($sql)){
-			$nombreRol = isset($roles[$row['RolID']]) ? $roles[$row['RolID']] : 'Rol no asignado';
+			while($row = mysqli_fetch_assoc($cons_vent)){
 			echo '
 			<tr>
-			<td>'.$row['UsuarioID'].'</td>
-			<td>'.$row['Nombre'].'</td>
-									<td>'.$row['Apellido'].'</td>
-									<td>'.$row['Email'].'</td>
-									<td>'.$row['Telefono'].'</td>
-									<td>'.$row['Direccion'].'</td>
-									<td>'.$row['FechaRegistro'].'</td>
-									<td>'.$nombreRol.'</td>
-			<td>
-			<a href="edit_usu.php?nik='.$row['UsuarioID'].'" title="Editar datos" class="btn btn-primary btn-sm"><i class="bx bx-up-arrow-circle bx-burst-hover" style="color:black"></i></a><a href="list_usu.php?aksi=delete&nik='.$row['UsuarioID'].'" title="Eliminar" onclick="return confirm(\'Esta seguro de borrar los datos '.$row['Nombre'].'?\')" class="btn btn-danger btn-sm"><i class="bx bxs-trash bx-tada-hover" style="color:black"  ></i></a>
-			</td>
-			';
+			<td>'.$row['id'].'</td>
+			<td>'.$row['ClaveTrans'].'</td>
+			<td>'.$row['Total'].'</td>';
 		}
 	}
 	?>
