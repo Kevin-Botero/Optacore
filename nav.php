@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-light bg-light" style="text-align: center; ">
-<a class="navbar-brand" href="index.php"><img src="IMAGENES/logopta.png" alt="" height="80px" width="100px"></a>
+<a class="navbar-brand" href="index.php"><img src="IMAGENES/logop.png" alt="" height="90px" width="120px"></a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
 <div class="dropdown">

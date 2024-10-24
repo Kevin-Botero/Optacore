@@ -39,6 +39,7 @@ echo '</table>';
 echo '<p> Total Final :  $ '.number_format($total ,2,",",".").'</p>';
 if (isset($_SESSION['carrito'])){
 unset($_SESSION['carrito']);
+session_regenerate_id();
 }
 }
 ?>

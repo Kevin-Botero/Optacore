@@ -27,6 +27,7 @@ $stock = 0;
 <?php
 if (isset($_GET['id']) == 'pagar') {
   $total = 0;
+  $id_usu = $_SESSION['info']['UsuarioID'];
   $Status_vent ='Pendiente';
   $datos_cart = $_SESSION['carrito'];
   $SID = session_id();
@@ -34,8 +35,8 @@ if (isset($_GET['id']) == 'pagar') {
     $total = $total + ($row['Precio']*$row['Cantidad']);
   }
 //INSERTAR VENTA
-  $insert_vent = $con->prepare("INSERT INTO tbventas(ClaveTrans,Total,Status_vent) VALUES (?,?,?)");
-  $insert_vent->bind_param("sds", $SID,$total,$Status_vent);
+  $insert_vent = $con->prepare("INSERT INTO tbventas(ClaveTrans,Total,Status_vent,UsuarioID) VALUES (?,?,?,?)");
+  $insert_vent->bind_param("sdsi", $SID,$total,$Status_vent,$id_usu);
   $insert_vent->execute();
   $id_vent = $con->insert_id;
 

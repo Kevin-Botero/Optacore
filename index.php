@@ -27,13 +27,13 @@ include("BD/conexion.php");
         <a class="nav-link" href="#">Gafas Oftàlmicas</a>
     </li> --->
 <li class="nav-item">
-  <a class="nav-link li_nav" href="#">Pide tu Cita</a>
+  <a class="nav-link li_nav" href="form_cita.php">Pide tu Cita</a>
 </li>
 <li class="nav-item">
   <a class="nav-link li_nav" href="conocenos.php">Conócenos</a>
 </li>
 </ul>
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="true">
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
 <div class="carousel-indicators">
   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -45,7 +45,7 @@ include("BD/conexion.php");
 <div class="carousel-caption d-none d-md-block">
 <h5>AGENDA TU REVISION ANUAL Y CUIDA TU VISION CN NOSOTROS </h5><br>
 <h5>Somos lideres en la salud visual, siempre estamos pensando en tu bienestar.</h5>
-<button class="btn btn-primary px-4 py-2 fs-5 mt-5">Agenda aqui</button>
+<a class="btn btn-primary px-4 py-2 fs-5 mt-5" href="form_cita.php">Agenda aqui</a>
 </div>
 </div>
 <div class="carousel-item d-item">
@@ -55,7 +55,7 @@ include("BD/conexion.php");
 <h5>Por la compra de montura + lente, obten </h5><br>
 <h3>30% DE DCTO.</h3>
 <h3>En productos selecionados.</h3>
-<button class="btn btn-primary px-4 py-2 fs-5 mt-5">compra aqui</button>
+<a class="btn btn-primary px-4 py-2 fs-5 mt-5" href="gallery_product.php">Compra aqui</a>
 </div>
 </div>
 <div class="carousel-item d-item">
@@ -64,7 +64,7 @@ include("BD/conexion.php");
 <h3>Estrena look bajo el sol</h3><br>
 <h3>30% DCTO EN GAFAS DE SOL.</h3><br>
 <h3>En productos selecionados.</h3>
-<button class="btn btn-primary px-4 py-2 fs-5 mt-5">compra aqui</button>
+<a class="btn btn-primary px-4 py-2 fs-5 mt-5" href="gallery_product.php">Compra aqui</a>
 </div>
 </div>
 </div>
@@ -79,16 +79,16 @@ include("BD/conexion.php");
 
             
 <b><h1>Lentes Destacados</h1></b> 
-<div class="container text-center"> 
-  <div class="d-flex flex-row">
+<div class="container text-center "> 
+<div class="row">
 <?php
 $sql = mysqli_query($con, "SELECT * FROM productos ORDER BY ProductoID ASC");
 if(mysqli_num_rows($sql) == 0){
     echo '<tr><td colspan="8">No hay datos.</td></tr>';
 }else{
 while($row = mysqli_fetch_assoc($sql) ){ 
-if ($row['ProductoID'] <= 4 ){ ?>
-<div class="p-2 flex-fill card" style="width: 18rem; margin:10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); ">
+if ($row['ProductoID'] <= 9 ){ ?>
+<div class="card mb-3 p-2 flex-fill card" style="width: 18rem; margin:10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); ">
   <?php echo '<img src="data:' .  ';base64,' . base64_encode($row['Imagen']) . '" class="card-img-top" alt="Imagen">';?>
   <div class="card-body">
   <h6 class="card-title"><?php echo $row['NombreProducto']; ?></h6>
@@ -113,7 +113,7 @@ if ($row['ProductoID'] <= 4 ){ ?>
 </div>
 </div>
 <div style="text-align: center;">
-<a href="gallery_product.php" class="btn btn-outline-primary" style="width: 68.7%;">Más Resultados</a>
+<a href="gallery_product.php" class="btn btn-outline-primary" style="width: 58.9%;">Más Resultados</a>
 </div>
 <hr>
 <div class="container-1">

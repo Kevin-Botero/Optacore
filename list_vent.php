@@ -49,7 +49,7 @@ include("BD/conexion.php");
 			<tr>
 			<td>'.$row['id'].'</td>
 			<td>'.$row['ClaveTrans'].'</td>
-			<td>'.$row['Total'].'</td>';
+			<td>$ ' .number_format($row['Total'] ,2,",",".").'</td>';
 		}
 	}
 	?>
