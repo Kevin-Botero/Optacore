@@ -14,10 +14,28 @@ include("BD/conexion.php");
 </head>
 <?php include 'nav.php'; ?>
 <body class="body">
+<?php
+$cat = isset($_GET['cat']) ? intval($_GET['cat']) : 0;
+?>
 <div class="container text-center "> 
 <div class="row ">
 <?php
-$sql = mysqli_query($con, "SELECT * FROM productos ORDER BY ProductoID ASC");
+if ($cat == 0) {
+  $sql = mysqli_query($con, "SELECT * FROM productos ORDER BY ProductoID ASC");
+}elseif ($cat == 1) {
+  $sql = mysqli_query($con, "SELECT * FROM productos WHERE CategoriaID = 1 ");
+}
+elseif ($cat == 2) {
+  $sql = mysqli_query($con, "SELECT * FROM productos WHERE CategoriaID = 2 ");
+}
+elseif ($cat == 3) {
+  $sql = mysqli_query($con, "SELECT * FROM productos WHERE CategoriaID = 3 ");
+}
+elseif ($cat == 4) {
+  $sql = mysqli_query($con, "SELECT * FROM productos WHERE CategoriaID = 4 ");
+}else{
+  $sql = mysqli_query($con, "SELECT * FROM productos ORDER BY ProductoID ASC");
+}
 if(mysqli_num_rows($sql) == 0){
     echo '<tr><td colspan="8">No hay datos.</td></tr>';
 }else{

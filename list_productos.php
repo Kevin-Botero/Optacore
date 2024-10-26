@@ -36,9 +36,11 @@ while ($nom_categoria = mysqli_fetch_assoc($con_categoria)) {
 <body>
 <?php include('nav.php');?>
 <div class="container">
-	<hr/>
-	<h2>Inventario</h2>
-	<hr/>
+<br>
+<a href="form_producto.php" class="btn btn-info" style="width: 100%;">Agregar Producto</a>
+<hr/>
+<h2 style="text-align: center;">Inventario</h2>
+<br>
 <?php
 if(isset($_GET['aksi']) == 'delete'){
 	// escaping, additionally removing everything that could be (html/javascript-) code

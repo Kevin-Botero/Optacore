@@ -76,13 +76,13 @@ $estado = "Pendiente";
 
 $insert_cita = $con->prepare("INSERT INTO citas(UsuarioID,FechaCita,id_hora,Nombre,Documento,MotivoCita,EstadoCita,especialistaID) VALUES (?,?,?,?,?,?,?,?)");
   $insert_cita->bind_param("isisissi", $id,$date,$time,$nombre,$doc,$movito,$estado,$esp);
-  if ($insert_cita->execute()) {
-    $_SESSION['mensaje'] = "La cita ha sido reservada con éxito.";
-    header("Location: form_cita.php");
-    exit;
-  }else{
-    echo '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>! Error, no se pudo reservar la cita.</div>';
-  }
+if ($insert_cita->execute()) {
+  $_SESSION['mensaje'] = "La cita ha sido reservada con éxito.";
+  header("Location: form_cita.php");
+  exit;
+}else{
+  echo '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>! Error, no se pudo reservar la cita.</div>';
+}
   
 }
 if (isset($_SESSION['mensaje'])) {

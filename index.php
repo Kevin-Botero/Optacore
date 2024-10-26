@@ -32,6 +32,9 @@ include("BD/conexion.php");
 <li class="nav-item">
   <a class="nav-link li_nav" href="conocenos.php">Conócenos</a>
 </li>
+<li class="nav-item">
+  <a class="nav-link li_nav" href="examen.php">Tipos de Examenes</a>
+</li>
 </ul>
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
 <div class="carousel-indicators">
@@ -103,24 +106,32 @@ if ($row['ProductoID'] <= 9 ){ ?>
 }
 }
 }?>
-<!--<img src="IMAGENES/gafa6.jpg" alt="" height="80em" >
-<img src="IMAGENES/gafa0.jfif" alt="" height="80em" >
-<img src="IMAGENES/gafa1.webp" alt="" height="180px" >
-<img src="IMAGENES/gafa3.webp" alt="" height="80em">
-<img src="IMAGENES/gafa4.jpg" alt="" height="80em" >
-<img src="IMAGENES/gafa9.jfif" alt="" height="80em" >
-<img src="IMAGENES/gafa5.jpg" alt="" height="80em" >-->
 </div>
 </div>
 <div style="text-align: center;">
 <a href="gallery_product.php" class="btn btn-outline-primary" style="width: 58.9%;">Más Resultados</a>
 </div>
 <hr>
+<h2>NUESTROS COLABORADORES</h2>
+<div class="parent">
+<section class="section">
+<img src="IMAGENES/influ1.jpg" alt="">
+<img src="IMAGENES/influ2.jpg" alt="">
+<img src="IMAGENES/influ3.jpg" alt="">
+<img src="IMAGENES/influ4.jpg" alt="">
+<img src="IMAGENES/influ5.jpg" alt="">
+<img src="IMAGENES/influ6.jpg" alt="">
+<img src="IMAGENES/influ7.jpg" alt="">
+<img src="IMAGENES/influ8.jpg" alt="">
+</section>
+
+</div>
+<hr>
 <div class="container-1">
-<img src="IMAGENES/michael.jpg" alt=""width="20%" height="20%">
-<img src="IMAGENES/ray.jpg" alt=""width="20%" height="20%">
-<img src="IMAGENES/emporio.jpg" alt="" width="20%" height="20%">
-<img src="IMAGENES/kilyan.jpg" alt=""width="20%" height="20%">
+<img src="IMAGENES/michael.jpg" alt=""width="10%" height="10%">
+<img src="IMAGENES/ray.jpg" alt=""width="10%" height="10%">
+<img src="IMAGENES/emporio.jpg" alt="" width="10%" height="10%">
+<img src="IMAGENES/kilyan.jpg" alt=""width="10%" height="10%">
 </div>
 <?php include('footer.php'); ?>
 </body>

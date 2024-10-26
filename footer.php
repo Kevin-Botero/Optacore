@@ -16,9 +16,7 @@
   
 </section>
 <section class="footer-section2">
-  <div>
     <h1><span>Productos</span></h1>
-    <div>
       <ul>
         <li><a href="#">Oakley</a></li>
         <li><a href="#">Persol</a></li>
@@ -31,8 +29,6 @@
         <li><a href="#">A|X Armani Exchange</a></li>
         <li><a href="#">Jean Monnier</a></li>
       </ul>
-    </div>
-  </div>
 </section>
 
 <section class="footer-section3">

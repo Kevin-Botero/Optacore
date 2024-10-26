@@ -32,7 +32,7 @@ while ($rol = mysqli_fetch_assoc($consulta)) {
 <?php include('nav.php');?>
 	<div class="container">
 	<hr/>
-	<h2>Lista de Usuarios</h2>
+	<h2 style="text-align: center;">Lista de Usuarios</h2>
 	<hr/>
 <?php
 if(isset($_GET['aksi']) == 'delete'){
@@ -78,12 +78,12 @@ if(isset($_GET['aksi']) == 'delete'){
 			<tr>
 			<td>'.$row['UsuarioID'].'</td>
 			<td>'.$row['Nombre'].'</td>
-									<td>'.$row['Apellido'].'</td>
-									<td>'.$row['Email'].'</td>
-									<td>'.$row['Telefono'].'</td>
-									<td>'.$row['Direccion'].'</td>
-									<td>'.$row['FechaRegistro'].'</td>
-									<td>'.$nombreRol.'</td>
+			<td>'.$row['Apellido'].'</td>
+			<td>'.$row['Email'].'</td>
+			<td>'.$row['Telefono'].'</td>
+			<td>'.$row['Direccion'].'</td>
+			<td>'.$row['FechaRegistro'].'</td>
+			<td>'.$nombreRol.'</td>
 			<td>
 			<a href="edit_usu.php?nik='.$row['UsuarioID'].'" title="Editar datos" class="btn btn-primary btn-sm"><i class="bx bx-up-arrow-circle bx-burst-hover" style="color:black"></i></a><a href="list_usu.php?aksi=delete&nik='.$row['UsuarioID'].'" title="Eliminar" onclick="return confirm(\'Esta seguro de borrar los datos '.$row['Nombre'].'?\')" class="btn btn-danger btn-sm"><i class="bx bxs-trash bx-tada-hover" style="color:black"  ></i></a>
 			</td>

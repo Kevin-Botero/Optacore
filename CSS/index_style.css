@@ -114,76 +114,110 @@ ul li {
   p, ul li {
       font-size: 1em;
   }
-}   
+}
+.section{
+  display: flex;
+  width: 500px;
+  height: 330px;
+}
+.section img{
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: .8;
+  transition: .5s ease;
+}
+.section img:hover{
+  cursor: crosshair;
+  width: 200px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+.parent{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
     
 
-    .container-imagen{
-      display: block;
-      
-      margin:5px;
-      text-align: center;
-    }
+.container-imagen{
+  display: block;
+  
+  margin:5px;
+  text-align: center;
+}
 
-    .container-1{
-      grid-template-columns: repeat(4fr);
-      text-align: center;
-    }
-    .container-footer{
-      grid-template-columns: repeat(2fr 1fr);
-      display: flex;
-      text-align: center;
-    }
-    footer {
-        margin-top: 20px;
-        padding: 50px ;
-        display: block;
-        gap: 5rem;
-        background-color:  #f6f7f7e1;
-        color:black;
-       width: 100%;
-       grid-template-columns: repeat(2fr 1fr);
-       text-align:justify;
-      }
-      
-     
-      
-      .footer-section1 h1 {
-        color:black;
-        margin-bottom: 20px;
-        font-size: 25px;
-      }
-      
-      .footer-section2 h1, .footer-section3 h1, .footer-section4 h1 {
-        font-size: 20px;
-        height: 70px;
-      }
-      
-      .footer-section2 ul, .footer-section3 ul, .footer-section4 ul {
-        list-style: none;
-      }
-      
-      .footer-section2 a, .footer-section3 a, .footer-section4 a {
-        text-decoration: none;
-        color:black;
-      }
-      
-      footer span {
-        color: #120c03;
-        font-weight: 800;
-        
-      }
-      
-        @media screen and (max-width:768px) {
+.container-1{
+  grid-template-columns: repeat(4fr);
+  text-align: center;
+}
+.container-footer{
+  grid-template-columns: repeat(2fr 1fr);
+  display: flex;
+  text-align: center;
+}
+footer {
+  margin-top: 20px;
+  padding: 50px ;
+  display: block;
+  gap: 5rem;
+  background-color:  #f6f7f7e1;
+  color:black;
+  width: 100%;
+  grid-template-columns: repeat(2fr 1fr);
+  text-align:justify;
+  }
+  
+  
+  
+  .footer-section1 h1 {
+    color:black;
+    margin-bottom: 20px;
+    font-size: 25px;
+  }
+  
+  .footer-section2 h1, .footer-section3 h1, .footer-section4 h1 {
+    font-size: 20px;
+    height: 70px;
+  }
+  
+  .footer-section2 ul, .footer-section3 ul, .footer-section4 ul {
+    list-style: none;
+  }
+  
+  .footer-section2 a, .footer-section3 a, .footer-section4 a {
+    text-decoration: none;
+    color:black;
+  }
+  
+  footer span {
+    color: #120c03;
+    font-weight: 800;
     
-            #form_wrapper {
-                grid-template-columns: 1fr;
-                margin-left: 10px;
-                margin-right: 10px;
-            }
-            
-            #form_left {
-                display: none;
-            }
+  }
+  
+    @media screen and (max-width:768px) {
+
+        #form_wrapper {
+            grid-template-columns: 1fr;
+            margin-left: 10px;
+            margin-right: 10px;
         }
         
+        #form_left {
+            display: none;
+        }
+    }
+/* Hacer que el menú se despliegue al pasar el mouse */
+.dropdown:hover .dropdown-menu {
+  display: block; /* Mostrar el menú en hover */
+}
+
+.dropdown-menu {
+  display: none; /* Ocultar el menú por defecto */
+  position: absolute; /* Asegurar que el menú no desplace el contenido */
+  z-index: 1000; /* Para que aparezca encima de otros elementos */
+}
+ 
         

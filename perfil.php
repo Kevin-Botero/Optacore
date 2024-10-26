@@ -8,7 +8,6 @@ include("BD/conexion.php");
 $consulta = mysqli_query($con, "SELECT * FROM roles");
 $usu = $_SESSION['info']['UsuarioID'];
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,6 +15,7 @@ $usu = $_SESSION['info']['UsuarioID'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Perfil</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="CSS/index_perfil.css">
     <link rel="stylesheet" href="CSS/index_style.css">
 </head>
@@ -42,8 +42,7 @@ $usu = $_SESSION['info']['UsuarioID'];
                     <div class="col-md-12"><label class="labels">Email </label><input type="text" class="form-control" placeholder="" value="<?php echo $_SESSION['info']['Email'];?>"></div>
                     <div class="col-md-12"><label class="labels">Telefono</label><input type="text" class="form-control" placeholder="" value="<?php echo $_SESSION['info']['Telefono'];?>"></div>
                 </div>
-               
-                <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+                <div class="mt-5 text-center"><a href="list_compras.php" class="btn btn-primary profile-button">Ver Compras</a></div>
             </div>
         </div>
     </div>
