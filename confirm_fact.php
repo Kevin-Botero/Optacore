@@ -42,6 +42,9 @@ unset($_SESSION['carrito']);
 session_regenerate_id();
 }
 }
+if (isset($_GET['fact']) == 'confirm'){
+  header('location: list_compras.php');
+}
 ?>
 </div></div>
 </body>

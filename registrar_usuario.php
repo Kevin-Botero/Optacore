@@ -81,34 +81,34 @@ include("BD/conexion.php");
 
 			?>
 <form action="" method="post">
-            <div class="input_container">
+            <div class="input_container" style="padding: 15px;">
                 <i class="fas fa-envelope"></i>
-                <input placeholder="Nombre" type="text" name="name" id="field_name" class='input_field'>
+                <input placeholder="Nombre" type="text"  name="name" id="field_name" class='input_field'>
             </div>
             <br>
-            <div class="input_container">
+            <div class="input_container" style="padding: 15px;">
                 <i class="fas fa-envelope"></i>
-                <input placeholder="Apellido" type="text" name="apellido" id="field_apellido" class='input_field'>
+                <input placeholder="Apellido" type="text"  name="apellido" id="field_apellido" class='input_field'>
             </div>
             <br>
-            <div class="input_container">
+            <div class="input_container" style="padding: 15px;">
                 <i class="fas fa-envelope"></i>
-                <input placeholder="Email" type="email" name="Email" id="field_email" class='input_field'>
+                <input placeholder="Email" type="email"  name="Email" id="field_email" class='input_field'>
             </div>
             <br>
-            <div class="input_container">
+            <div class="input_container" style="padding: 15px;">
                 <i class="fas fa-lock"></i>
-                <input  placeholder="Contraseña" type="password" name="pwd_form" id="field_password" class='input_field'>
+                <input  placeholder="Contraseña" type="password"  name="pwd_form" id="field_password" class='input_field'>
             </div>
             <br>
-            <div class="input_container">
+            <div class="input_container" style="padding: 15px;">
                 <i class="fas fa-envelope"></i>
-                <input placeholder="Telefono" type="number" name="telefono" id="field_telefono" class='input_field'>
+                <input placeholder="Telefono" type="number"  name="telefono" id="field_telefono" class='input_field'>
             </div>
             <br>
-            <div class="input_container">
+            <div class="input_container" style="padding: 15px;">
                 <i class="fas fa-envelope"></i>
-                <input placeholder="Direccion" type="adress" name="direccion" id="field_direccion" class='input_field'>
+                <input placeholder="Direccion" type="adress"  name="direccion" id="field_direccion" class='input_field'>
             </div>
             <br>
             <div class="submit">

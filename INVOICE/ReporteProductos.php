@@ -85,7 +85,7 @@ $pdf->AliasNbPages(); //muestra la pagina / y total de paginas
 $i = 0;
 $pdf->SetFont('Arial', '', 12);
 $pdf->SetDrawColor(163, 163, 163); //colorBorde
-
+$total = 0 ;
 $nik = mysqli_real_escape_string($con,(strip_tags($_GET["nik"],ENT_QUOTES)));
 $sql = mysqli_query($con, "SELECT * FROM tbdetalle_vent WHERE id ='$nik'");
 if(mysqli_num_rows($sql) == 0){
@@ -93,7 +93,6 @@ if(mysqli_num_rows($sql) == 0){
 }else{
 while ($row = mysqli_fetch_assoc($sql)) {
   $id_product = "";
-  $total = 0 ;
   $productoTotal = $row['Precio_unit'] * $row['Cantidad'];
   $id_product = $row['ProductoID'];
   $stmt = mysqli_prepare($con, "SELECT NombreProducto FROM productos WHERE ProductoID = ?");

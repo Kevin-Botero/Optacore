@@ -95,12 +95,12 @@ if (isset($_SESSION['mensaje'])) {
 
 <label>Fecha:</label>
 <input type="date" id="" name="Date" value="<?php echo htmlspecialchars($fechaSeleccionada); ?>" required <?php if ($mostrarInput == true) {
-  echo 'disabled';
+  echo 'readonly';
 } ?> >
 
 <label >Especialista:</label>
 <select name="Especialista" class="form-control" id="" <?php if ($mostrarInput == true) {
-  echo 'disabled';
+  echo 'readonly';
 } ?> >
 <?php 
   while ($especialista = mysqli_fetch_assoc($consulta_especialista)) {
