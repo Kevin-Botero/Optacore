@@ -115,14 +115,16 @@ if ($row['ProductoID'] <= 9 ){ ?>
 <h2>NUESTROS COLABORADORES</h2>
 <div class="parent">
 <section class="section">
-<img src="IMAGENES/influ1.jpg" alt="">
-<img src="IMAGENES/influ2.jpg" alt="">
-<img src="IMAGENES/influ3.jpg" alt="">
-<img src="IMAGENES/influ4.jpg" alt="">
-<img src="IMAGENES/influ5.jpg" alt="">
-<img src="IMAGENES/influ6.jpg" alt="">
-<img src="IMAGENES/influ7.jpg" alt="">
-<img src="IMAGENES/influ8.jpg" alt="">
+<img src="IMAGENES/influ1.jfif" alt="">
+<img src="IMAGENES/influ2.jfif" alt="">
+<img src="IMAGENES/influ3.jfif" alt="">
+<img src="IMAGENES/influ4.jfif" alt="">
+<img src="IMAGENES/influ5.jfif" alt="">
+<img src="IMAGENES/influ6.jfif" alt="">
+<img src="IMAGENES/influ7.jfif" alt="">
+<img src="IMAGENES/influ8.jfif" alt="">
+<img src="IMAGENES/influ9.jfif" alt="">
+<img src="IMAGENES/influ10.jfif" alt="">
 </section>
 
 </div>
@@ -132,6 +134,9 @@ if ($row['ProductoID'] <= 9 ){ ?>
 <img src="IMAGENES/ray.jpg" alt=""width="10%" height="10%">
 <img src="IMAGENES/emporio.jpg" alt="" width="10%" height="10%">
 <img src="IMAGENES/kilyan.jpg" alt=""width="10%" height="10%">
+<img src="IMAGENES/prada.jfif" alt=""width="10%" height="10%">
+<img src="IMAGENES/sport.avif" alt=""width="14%" height="10%">
+<img src="IMAGENES/dolce-gavana.jpg" alt=""width="10%" height="10%">
 </div>
 <?php include('footer.php'); ?>
 </body>

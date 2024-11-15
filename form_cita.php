@@ -6,7 +6,7 @@ if (!isset($_SESSION['isLogin']) || $_SESSION['isLogin'] != true) {
 }
 include("BD/conexion.php");
 $consulta_hora = mysqli_query($con, "SELECT * FROM horas");
-$consulta_especialista = mysqli_query($con, "SELECT * FROM especialistas");
+$consulta_especialista = mysqli_query($con, "SELECT * FROM especialistas WHERE Estado = 'Activo' ");
 
 $mostrarInput = false;
 
@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $especialistaID = $_POST['Especialista'];
   $mostrarInput = true;
 
-  $consulta = $con->prepare("SELECT id_hora FROM citas WHERE FechaCita = ? AND especialistaID = ?");
+  $consulta = $con->prepare("SELECT id_hora FROM citas WHERE FechaCita = ? AND especialistaID = ? AND EstadoCita != 'Cancelada'");
   $consulta->bind_param ("si", $fechaSeleccionada,$especialistaID);
   $consulta->execute();
   $resultado = $consulta->get_result();

@@ -33,18 +33,23 @@ if(isset($_GET['aksi']) == 'delete'){
 	// escaping, additionally removing everything that could be (html/javascript-) code
 	$nik = mysqli_real_escape_string($con,(strip_tags($_GET["nik"],ENT_QUOTES)));
 	$cek = mysqli_query($con, "SELECT * FROM especialistas WHERE especialistaID ='$nik'");
+    $cit = mysqli_query($con, "SELECT * FROM citas WHERE especialistaID ='$nik'");
 	if(mysqli_num_rows($cek) == 0){
-        $_SESSION['mensaje'] = " No se encontraron datos.";
+        $_SESSION['mensaje_error'] = " No se encontraron datos.";
         header("Location: list_especialistas.php");
         exit;
-	}else{
+	}elseif(mysqli_num_rows($cit) > 0 ){
+        $_SESSION['mensaje_error'] = " No se puede eliminar el Especialista, tiene citas aginadas.";
+        header("Location: list_especialistas.php");
+        exit;
+    }else{
 		$delete = mysqli_query($con, "DELETE FROM especialistas WHERE especialistaID='$nik'");
 		if($delete){
             $_SESSION['mensaje'] = "El Especialista ha sido eliminado correctamente.";
             header("Location: list_especialistas.php");
             exit;
 		}else{
-            $_SESSION['mensaje'] = "Error, no se pudo eliminar el especialista";
+            $_SESSION['mensaje_error'] = "Error, no se pudo eliminar el especialista";
             header("Location: list_especialistas.php");
             exit;
 		}
@@ -62,6 +67,9 @@ if(isset($_GET['aksi']) == 'delete'){
 <?php if (isset($_SESSION['mensaje'])) {
     echo '<div class="alert alert-success alert-dismissable">' . $_SESSION['mensaje'] . '</div>';
     unset($_SESSION['mensaje']);
+}if (isset($_SESSION['mensaje_error'])) {
+    echo '<div class="alert alert-danger alert-dismissable">' . $_SESSION['mensaje_error'] . '</div>';
+    unset($_SESSION['mensaje_error']);
 } ?>
 <table class="table table-striped table-hover">
 <thead>
@@ -70,6 +78,7 @@ if(isset($_GET['aksi']) == 'delete'){
     <th>NOMBRE</th>
     <th>CEDULA</th>
     <th>CARNET</th>
+    <th>ESTADO</th>
     <th>ACCIONES</th>
 </tr>
 </thead>
@@ -88,6 +97,7 @@ if(mysqli_num_rows($sql) == 0){
     <td>'.$row['Nombre'].'</td>
     <td>'.$row['Documento'].'</td>
     <td>'.$row['Carnet'].'</td>
+    <td>'.$row['Estado'].'</td>
     <td>
     <a href="edit_especialistas.php?nik='.$row['especialistaID'].'" title="Editar datos" class="btn btn-primary btn-sm"><i class="bx bx-up-arrow-circle bx-burst-hover" style="color:black"></i></a><a href="list_especialistas.php?aksi=delete&nik='.$row['especialistaID'].'" title="Eliminar" onclick="return confirm(\'Esta seguro de borrar los datos '.$row['Nombre'].'?\')" class="btn btn-danger btn-sm"><i class="bx bxs-trash bx-tada-hover" style="color:black"  ></i></a>
     </td>

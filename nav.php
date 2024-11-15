@@ -43,6 +43,7 @@ if (isset($_SESSION['isLogin']) && $_SESSION['isLogin'] == true) {
                 <li><a class="dropdown-item" href="list_productos.php">Productos</a></li>
                 <li><a class="dropdown-item" href="list_especialistas.php">Especialistas</a></li>
                 <li><a class="dropdown-item" href="list_vent.php">Ventas</a></li>
+                <li><a class="dropdown-item" href="reportes.php">Reportes</a></li>
                 <li><a class="dropdown-item" href="list_citas.php">Citas</a></li>
             </ul>
         </div>';
@@ -57,7 +58,6 @@ if (isset($_SESSION['isLogin']) && $_SESSION['isLogin'] == true) {
 </ul>
 </div>
 </nav>
-
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>

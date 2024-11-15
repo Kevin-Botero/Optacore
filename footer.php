@@ -1,61 +1,44 @@
-<footer class="footer">     
+<link rel="stylesheet" href="CSS/style.css">
+<hr style="margin-top: 20px ; margin-bottom: 0px;" class="animated-hr">
+<footer>     
   <div class="container-footer">
-    <section class="footer-section2">
-  <div>
-    <h1><span>Nuestros Servicios</span></h1>
-  </div>
-  <div>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="index.html">Citas Medicas</a></li>
-      <li><a href="index.html">Trabaja con nosotros</a></li>
-      <li><a href="#ubicacion">Monturas</a></li>
-      
-    </ul>
-  </div>
-  
-</section>
-<section class="footer-section2">
-    <h1><span>Productos</span></h1>
+    <!-- Sección Servicios -->
+    <section class="footer-section">
+      <h6 class="footer-title">Nuestros Servicios</h6>
       <ul>
-        <li><a href="#">Oakley</a></li>
-        <li><a href="#">Persol</a></li>
-        <li><a href="#">Platini</a></li>
-        <li><a href="#">Polo Ralph Lauren</a></li>
-        <li><a href="#">Giorgio Armani</a></li>
-        <li><a href="#">Dolce & Gabbana</a></li>
-        <li><a href="#">Coach</a></li>
-        <li><a href="#">Bvlgari</a></li>
-        <li><a href="#">A|X Armani Exchange</a></li>
-        <li><a href="#">Jean Monnier</a></li>
+        <li>Inicio</li>
+        <li>Citas Médicas</li>
+        <li>Trabaja con Nosotros</li>
+        <li>Monturas</li>
       </ul>
-</section>
+    </section>
 
-<section class="footer-section3">
-  <div>
-    <h1><span>Siguenos</span></h1>
+    <!-- Sección Productos -->
+    <section class="footer-section">
+      <h6 class="footer-title">Productos</h6>
+      <ul>
+        <li>Oakley</li>
+        <li>Persol</li>
+        <li>Platini</li>
+        <li>Polo Ralph Lauren</li>
+        <li>Giorgio Armani</li>
+        <li>Dolce & Gabbana</li>
+        <li>Coach</li>
+        <li>Bvlgari</li>
+        <li>A|X Armani Exchange</li>
+        <li>Jean Monnier</li>
+      </ul>
+    </section>
+
+    <!-- Sección Redes Sociales -->
+    <section class="footer-section">
+      <h6 class="footer-title">Síguenos</h6>
+      <ul class="social-links">
+        <li><img src="IMAGENES/instagram.png" alt="Instagram" height="12" width="12"> Instagram</li>
+        <li><img src="IMAGENES/whatsapp.png" alt="Whatsapp" height="12" width="12"> Whatsapp</li>
+        <li><img src="IMAGENES/facebook.png" alt="Facebook" height="12" width="12"> Facebook</li>
+        <li><img src="IMAGENES/tik-tok.png" alt="Tik Tok" height="12" width="12"> Tik Tok</li>
+      </ul>
+    </section>
   </div>
-  <div>
-  <ul>
-      <li><a href="#"><img src="IMAGENES/instagram.png" alt="" height="20px" width="20px">Instagram</a></li>
-      <li><a href="#"><img src="IMAGENES/whatsapp.png" alt="" height="20px" width="20px">Whatsapp</a></li>
-      <li><a href="#"><img src="IMAGENES/facebook.png" alt="" height="20px" width="20px">Facebook</a></li>
-      <li><a href="#"><img src="IMAGENES/tik-tok.png" alt="" height="20px" width="20px">Tik Tok</a></li>
-    </ul>
-  </div>
-</section>
-  </div>
-  <!--<div>
-  <center style="background-color: white; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);">
-    <img src="IMAGENES/OAKLEY.jpg" alt="" width="75px;">
-    <img src="IMAGENES/persol.jpg" alt="" width="75px;">
-    <img src="IMAGENES/platini_1.jpg" alt="" width="75px;">
-    <img src="IMAGENES/polo.jpg" alt="" width="75px;">
-    <img src="IMAGENES/giorgio.jpg" alt="" width="75px;">
-    <img src="IMAGENES/dolce_1.jpg" alt="" width="75px;">
-    <img src="IMAGENES/coach.jpg" alt="" width="75px;">
-    <img src="IMAGENES/bvlgari_1.jpg" alt="" width="75px;">
-    <img src="IMAGENES/armani.jpg" alt="" width="75px;">
-    <img src="IMAGENES/jean-monnier.jpg" alt="" width="75px;"></center>
-  </div>-->
 </footer>

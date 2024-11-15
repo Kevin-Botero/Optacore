@@ -8,8 +8,8 @@ nav{
     --form_bg: #ffffff;
     --input_bg: #E5E5E5;
     --input_hover:#eaeaea;
-    --submit_bg: #1FCC44;
-    --submit_hover: #40e263;
+    --submit_bg: #0077d9;
+    --submit_hover: #0033d9;
     --icon_color:#6b6b6b;
 }
 * {
@@ -160,3 +160,90 @@ h1,
             display: none;
         }
     }
+/* Importar fuente */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/* Estilos principales del footer */
+footer {
+    background-color: #dbdbdb; /* Color muy claro que resalta sobre el blanco */
+    color: #333; /* Texto en gris oscuro para buena legibilidad */
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.85em; /* Tamaño de letra más grande */
+    padding: 1.5rem 0; /* Espaciado para que el contenido no quede tan ajustado */
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+/* Contenedor central del footer */
+.container-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 90%; /* Ancho del 90% del viewport */
+    max-width: 1200px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+/* Estilos de cada sección */
+.footer-section {
+    flex: 1 1 200px; /* Ancho adaptable */
+}
+
+/* Estilos del título */
+.footer-title {
+    font-weight: 600;
+    color: #007bff; /* Azul sutil para el título */
+    margin-bottom: 8px;
+    font-size: 1em; /* Tamaño de letra mejorado para el título */
+}
+
+/* Listas de enlaces */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5; /* Espaciado ligeramente aumentado */
+}
+
+.footer-section li {
+    color: #555; /* Gris medio para los elementos de lista */
+    font-size: 0.9em; /* Tamaño de letra más legible */
+}
+
+/* Ajustar los elementos de las redes sociales */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los iconos horizontalmente */
+    padding-left: 0; /* Elimina el relleno izquierdo */
+}
+
+.social-links li {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra los elementos dentro de la lista */
+    gap: 8px;
+    color: #555; /* Color gris para el texto */
+    font-size: 0.9em; /* Tamaño de la fuente */
+}
+
+.social-links li img {
+    vertical-align: middle;
+}
+/* Estilos para el <hr> animado */
+.animated-hr {
+    border: none; /* Elimina el borde estándar del <hr> */
+    height: 4px; /* Grosor de la línea */
+    background: linear-gradient(90deg, #ffdd57, #28a745, #007bff, #ffdd57); /* Gradiente de amarillo, verde y azul */
+    background-size: 300%; /* Tamaño extendido para el efecto de desplazamiento */
+    animation: colorShift 5s infinite linear; /* Animación continua de cambio de color */
+    border-radius: 2px; /* Bordes redondeados */
+}
+
+/* Animación de desplazamiento de color */
+@keyframes colorShift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}

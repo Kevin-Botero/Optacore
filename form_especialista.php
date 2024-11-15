@@ -30,10 +30,17 @@ include("BD/conexion.php");
 <center>
 <div id="container" style="margin: 20px; width: 30%;">
 <?php
+$sql = mysqli_query($con, "SELECT * FROM especialistas");
+if($sql === false || mysqli_num_rows($sql) == 0){
+  header("Location: index.php");
+}else{
+  $row = mysqli_fetch_assoc($sql);
+}
 if(isset($_POST['add'])){
   $nombre		     = mysqli_real_escape_string($con,(strip_tags($_POST["name"],ENT_QUOTES)));//Escanpando caracteres
   $documento		     = mysqli_real_escape_string($con,(strip_tags($_POST["documento"],ENT_QUOTES)));//Escanpando caracteres
-  $carnet		     = mysqli_real_escape_string($con,(strip_tags($_POST["carnet"],ENT_QUOTES)));//Escanpando caracteres 
+  $carnet		     = mysqli_real_escape_string($con,(strip_tags($_POST["carnet"],ENT_QUOTES)));//Escanpando caracteres
+  $estado        = "Activo";
 
 $resultadosD = mysqli_query($con, "SELECT * FROM especialistas WHERE Documento = $documento ");
 if($documento == $row['Documento']){
@@ -45,9 +52,9 @@ if($carnet == $row['Carnet']){
 }
 
 if(($resultadosD === false || mysqli_num_rows($resultadosD) == 0) && ($resultadosC === false || mysqli_num_rows($resultadosC) == 0)){
-  $insert = $con->prepare("INSERT INTO especialistas(Nombre,Documento,Carnet) VALUES(?,?,?)");
+  $insert = $con->prepare("INSERT INTO especialistas(Nombre,Documento,Carnet,Estado) VALUES(?,?,?,?)");
   if ($insert) {
-  $insert->bind_param("sii", $nombre,$documento,$carnet);
+  $insert->bind_param("siis", $nombre,$documento,$carnet,$estado);
   if ($insert->execute()) {
     $_SESSION['mensaje'] = "El Especialista ha sido registrado correctamente.";
     header("Location: list_especialistas.php");

@@ -42,6 +42,10 @@ while ($nom_categoria = mysqli_fetch_assoc($con_categoria)) {
 <h2 style="text-align: center;">Inventario</h2>
 <br>
 <?php
+if (isset($_SESSION['mensaje'])) {
+	echo '<div class="alert alert-success alert-dismissable">' . $_SESSION['mensaje'] . '</div>';
+	unset($_SESSION['mensaje']);  
+	}
 if(isset($_GET['aksi']) == 'delete'){
 	// escaping, additionally removing everything that could be (html/javascript-) code
 	$nik = mysqli_real_escape_string($con,(strip_tags($_GET["nik"],ENT_QUOTES)));

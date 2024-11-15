@@ -24,6 +24,7 @@ include("BD/conexion.php");
 <link rel="stylesheet" href="CSS/index_perfil.css">
 <link rel="stylesheet" href="CSS/index_style.css">
 </head>
+<?php include("nav.php"); ?>
 <body>
 <?php
 $resultados = "";
@@ -39,7 +40,8 @@ if($sql === false || mysqli_num_rows($sql) == 0){
 if(isset($_POST['update'])){
 $name		     = mysqli_real_escape_string($con,(strip_tags($_POST["name"],ENT_QUOTES)));//Escanpando caracteres
 $documento		     = mysqli_real_escape_string($con,(strip_tags($_POST["documento"],ENT_QUOTES)));//Escanpando caracteres
-$carnet		     = mysqli_real_escape_string($con,(strip_tags($_POST["carnet"],ENT_QUOTES)));//Escanpando caracteres 
+$carnet		     = mysqli_real_escape_string($con,(strip_tags($_POST["carnet"],ENT_QUOTES)));//Escanpando caracteres
+$estado		     = mysqli_real_escape_string($con,(strip_tags($_POST["estado"],ENT_QUOTES)));//Escanpando caracteres
 
 $resultadosD = mysqli_query($con, "SELECT * FROM especialistas WHERE Documento = $documento ");
 if($documento == $row['Documento']){
@@ -50,8 +52,8 @@ if($carnet == $row['Carnet']){
   $resultadosC = false;
 }
 if(($resultadosD === false || mysqli_num_rows($resultadosD) == 0) && ($resultadosC === false || mysqli_num_rows($resultadosC) == 0)){
-    $update = $con->prepare("UPDATE especialistas SET Nombre=?, Documento=?, Carnet=? WHERE especialistaID=?");
-    $update->bind_param("siii", $name, $documento, $carnet, $nik);
+    $update = $con->prepare("UPDATE especialistas SET Nombre=?, Documento=?, Carnet=?, Estado=? WHERE especialistaID=?");
+    $update->bind_param("siisi", $name, $documento, $carnet, $estado, $nik);
     if ($update->execute()) {
         $_SESSION['mensaje'] = "Los datos han sido guardados con éxito.";
         header("Location: list_especialistas.php");
@@ -95,6 +97,13 @@ if(($resultadosD === false || mysqli_num_rows($resultadosD) == 0) && ($resultado
 <div class="col-md-12">
     <label class="labels">CARNET</label>
     <input type="number" class="form-control" name="carnet" placeholder="" value="<?php echo $row['Carnet'] ?>">
+
+    <label class="labels">ESTADO</label>
+    <select class="form-control" name="estado" id="">
+        <option value="Activo" <?php echo ($row['Estado'] == 'Activo') ? 'selected' : ''; ?>>Activo</option>
+        <option value="Inactivo" <?php echo ($row['Estado'] == 'Inactivo') ? 'selected' : ''; ?>>Inactivo</option>
+    </select>
+
     <br>
     <center><input type="submit" name="update" class="btn btn-sm btn-primary" value="Actualizar datos"><a href="index.php" class="btn btn-sm btn-danger">Cancelar</a></center>
 </div>
